@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau truc dieu kien - 2650</title>
+    <style>
+        .main,result{
+            width: 30%;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <label>Chuyen doi do C -> do F</label>
+    <br/>
+    <input type="number" name="" id="do_C">
+    <input type="button" value="Submit" onclick="change()">
+    <br/>
+    <label>Chuyen doi M -> Feet</label>
+    <br/>
+    <input type="number" name="" id="meter">
+    <input type="button" value="Submit" onclick="Tinh();">
+    <br/>
+    <label>Tinh dien tich hinh vuong</label>
+    <br/>
+    <input type="number" name="" id="a">
+    <input type="button" value="Submit" onclick="hinhVuong();">
+    <br/>
+    <label>Tinh dien tich hinh chu nhat</label>
+    <br/>
+    <input type="number" name="" id="_a">
+    <input type="number" name="" id="_b">
+    <input type="button" value="Submit" onclick="hinhChuNhat();">
+    <label>Tinh dien tich hinh tam giac vuong</label>
+    <br/>
+    <input type="number" name="" id="_a">
+    <input type="number" name="" id="_b">
+    <input type="button" value="Submit" onclick="hinhTamGiac();">
+</div>
+
+<div class="result">
+    <p id="result"></p>
+</div>
+<script>
+    function change() {
+        do_C = document.getElementById('do_C').value;
+
+        do_F = do_C*1.6+32
+
+        document.getElementById('result').innerHTML = do_F+" do F";
+    }
+
+    function Tinh() {
+        meter = document.getElementById('meter').value;
+
+        feet = meter*3.2808;
+
+        document.getElementById('result').innerHTML = feet.toFixed(4)+" Feet";
+    }
+    function hinhVuong() {
+        a = document.getElementById('a').value;
+
+        s = Math.pow(a,2);
+
+        console.log(s);
+
+        document.getElementById('result').innerHTML = "Dien tich la: "+s;
+    }
+    function hinhChuNhat() {
+        a = Number(document.getElementById('_a').value);
+        b = Number(document.getElementById('_b').value);
+
+        s = a*b;
+        console.log(s)
+        document.getElementById('result').innerHTML = " Dien tich la: "+s;
+    }
+    function hinhTamGiac() {
+
+    }
+</script>
+</body>
+</html>
